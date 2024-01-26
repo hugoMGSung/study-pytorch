@@ -30,4 +30,4 @@ PyTorch 학습 리포지토리
 	> pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 
 	```
 
-[파이토치01]()
+[파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.md)
