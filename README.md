@@ -15,7 +15,7 @@ PyTorch 학습 리포지토리
 	- https://pytorch.org/ 에서 플랫폼 별로 명령어 검색가능
 
 	```shell
-	> pip install pytorch torchvision torchaudio cpuonly
+	> pip install torch torchvision torchaudio
 	```
 
 	- 나의 경우 CUDA 12 버전 설치됨
