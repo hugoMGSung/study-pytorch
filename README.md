@@ -32,7 +32,22 @@ PyTorch 학습 리포지토리
 
 ### 설치 확인
 - CUDA 확인
+	- 권장버전은 12.4 인데 현재 11.2가 설치되어 있음
+	- PyTorch에서는 12.1을 권장. 다시 CUDA 설치함
 
 	<img src="https://raw.githubusercontent.com/hugoMGSung/study-pytorch/main/images/torch0001.png" width="730">
+
+
+- PyTorch + Cuda
+	```shell
+	(pytorch_env) PS > pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+	...
+	Installing collected packages: torch, torchvision, torchaudio
+	Successfully installed torch-2.3.1+cu121 torchaudio-2.3.1+cu121 torchvision-0.18.1+cu121
+	(pytorch_env) PS >
+	```
+
+	- 추가 - numpy는 1.X 버전으로 재설치 할 것
+
 
 [파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.ipynb)
