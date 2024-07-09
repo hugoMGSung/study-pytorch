@@ -33,6 +33,6 @@ PyTorch 학습 리포지토리
 ### 설치 확인
 - CUDA 확인
 
-	<img src="" width="730">
+	<img src="https://raw.githubusercontent.com/hugoMGSung/study-pytorch/main/images/torch0001.png" width="730">
 
 [파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.md)
