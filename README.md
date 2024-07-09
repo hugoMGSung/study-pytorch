@@ -51,3 +51,33 @@ PyTorch 학습 리포지토리
 
 
 [파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.ipynb)
+
+
+## 기본 내용 중
+
+### 판다스...
+- 판다스, 넘파이, 맷플롭립은 패스
+
+## 파이토치 패키지 구성
+
+### torch
+- 메인 네임스페이스. 텐서 등의 수학함수 포함, Numpy와 유사한 구조
+
+### torch.autograd
+- 자동 미분을 위한 함수들 포함. 
+
+### torch.nn
+- 신경망을 구축하기 위한 다양한 데이터 구조와 레이어 등 정의. RNN, LSTM 레이어와 ReLU, MESLoss 등의 텐서플로우에 있던 함수 모델포함
+
+### torch.optim
+- 확률적 경사 하강법(Stochastic Gradient Descent, SGD) 중심 파라미터 최적화 알고리즘 포함
+
+### torch.utils.data
+- SGD 반복 연산시 배치용 유틸리티 함수 포함
+
+### torch.onnx
+- ONNX(Open Neural Network Exchange) 포맷의 모델 포함
+
+
+[파이토치2 - 텐서](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch02.ipynb)
+
