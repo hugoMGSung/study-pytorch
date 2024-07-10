@@ -64,9 +64,9 @@ PyTorch 학습 리포지토리
 - 메인 네임스페이스. 텐서 등의 수학함수 포함, Numpy와 유사한 구조
 
 ### torch.autograd
-- 자동 미분을 위한 함수들 포함. 
+- 자동 미분을 위한 함수들 포함. 자동 미분 사용을 위한 컨텍스트 매니저, 기반클래스 Function 등 포함
 
-### torch.nn
+### torch.nn / torch.nn.functional 
 - 신경망을 구축하기 위한 다양한 데이터 구조와 레이어 등 정의. RNN, LSTM 레이어와 ReLU, MESLoss 등의 텐서플로우에 있던 함수 모델포함
 
 ### torch.optim
