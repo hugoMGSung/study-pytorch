@@ -53,6 +53,14 @@ PyTorch 학습 리포지토리
 [파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.ipynb)
 
 
+#### 가끔씩 실행 오류
+- import torch에서 NameError: name '_C' is not defined 가 발생하면
+	```shell
+	> pip install Cython
+	``` 
+	
+	- 설치 또는 런타임 재실행 하면 됨
+
 ## 기본 내용 중
 
 ### 판다스...
@@ -80,4 +88,6 @@ PyTorch 학습 리포지토리
 
 
 [파이토치2 - 텐서](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch02.ipynb)
+
+[인공신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch03.ipynb)
 
