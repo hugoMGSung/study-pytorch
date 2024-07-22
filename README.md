@@ -89,5 +89,10 @@ PyTorch 학습 리포지토리
 
 [파이토치2 - 텐서](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch02.ipynb)
 
-[인공신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch03.ipynb)
+[선형회귀](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch03.ipynb)
 
+
+
+[인경신공망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch04.ipynb)
+
+[합성곱신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch05.ipynb)
