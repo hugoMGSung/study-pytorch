@@ -96,3 +96,9 @@ PyTorch 학습 리포지토리
 [인경신공망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch04.ipynb)
 
 [합성곱신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch05.ipynb)
+
+
+## 파이토치 공부 다시
+
+### 위키북스 책 좋네
+
