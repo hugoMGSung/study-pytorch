@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 /pytorch_env
 /yolov5_env
+yolov8_test/sample/sample_720p_35mins.mp4
