@@ -161,3 +161,7 @@ cython_debug/
 /pytorch_env
 /yolov5_env
 yolov8_test/sample/sample_720p_35mins.mp4
+cnn/data/cifar-10-python.tar.gz
+/cnn/data/cifar-10-batches-py
+/data/FashionMNIST
+/data/FashionMNIST
