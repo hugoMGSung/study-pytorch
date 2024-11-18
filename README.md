@@ -101,3 +101,9 @@ PyTorch 학습 리포지토리
 ### 파이토치 HS 학습
 
 [링크](https://github.com/hugoMGSung/study-pytorch/tree/main/hansung_pytorch)
+
+#### 선형회귀
+
+#### 로지스틱회귀
+
+#### 다중분류
