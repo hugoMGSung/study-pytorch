@@ -102,8 +102,12 @@ PyTorch 학습 리포지토리
 
 [링크](https://github.com/hugoMGSung/study-pytorch/tree/main/hansung_pytorch)
 
-#### 선형회귀
+#### 선형회귀 부터 CNN 까지
+- 완료
 
-#### 로지스틱회귀
+### 파이토치 실습
 
-#### 다중분류
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/after_hs)
+
+#### RNN 순환신경망
+
