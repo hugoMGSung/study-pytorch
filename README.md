@@ -174,6 +174,12 @@ PyTorch 학습 리포지토리
 	model.eval()
 	```
 
+### 3분 딥러닝 따라만하기
+- https://github.com/keon/3-min-pytorch/tree/master
+
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/3min_pytorch)
+
+
 ### 파이토치 HS 학습
 
 [링크](https://github.com/hugoMGSung/study-pytorch/tree/main/hansung_pytorch)
@@ -185,5 +191,12 @@ PyTorch 학습 리포지토리
 
 [링크](https://github.com/hugoMGSung/study-pytorch/tree/main/after_hs)
 
-#### RNN 순환신경망
+### 캐글 Kagglehub 사용
+
+- 캐글 로그인 후 셋팅에서 API 토큰 생성, kaggle.json 파일 다운로드
+
+	<img src="https://raw.githubusercontent.com/hugoMGSung/study-pytorch/main/images/torch0020.png" width="730">
+
+
+
 

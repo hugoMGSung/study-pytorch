@@ -167,3 +167,4 @@ cnn/data/cifar-10-python.tar.gz
 /data/FashionMNIST
 /hansung_pytorch/CIFAR_data
 /hansung_pytorch/MNIST_data
+/3min_pytorch/data/FashionMNIST
