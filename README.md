@@ -52,6 +52,118 @@ PyTorch 학습 리포지토리
 
 [파이토치01](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/Pytorch01.ipynb)
 
+### 파이토치 신경망 훈련 순서
+1. 데이터 준비 (Data Preparation)
+	- 데이터셋 로드: 훈련과 검증을 위한 데이터를 로드합니다. 일반적으로 torchvision이나 torch.utils.data.DataLoader를 사용하여 데이터셋을 불러옵니다.
+	- 데이터 전처리: 데이터를 모델에 맞게 변환합니다. 예를 들어, 이미지 데이터는 텐서로 변환하고, 필요하다면 정규화(normalization)나 크기 조정(resizing)을 합니다.
+	- DataLoader 생성: PyTorch의 DataLoader를 사용하여 데이터를 배치로 나누고, 셔플 및 병렬 처리를 설정합니다.
+
+	```python
+	from torch.utils.data import DataLoader
+	from torchvision import datasets, transforms
+
+	transform = transforms.Compose([
+		transforms.ToTensor(),
+		transforms.Normalize((0.5,), (0.5,))  # 정규화
+	])
+	train_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+	train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
+	```
+
+2. 모델 정의 (Model Definition)
+	- 모델을 정의합니다. 파이토치에서는 nn.Module을 상속받아 신경망 모델을 정의할 수 있습니다. 모델 구조에는 레이어, 활성화 함수, 순전파(forward) 방식이 포함됩니다.
+	
+	```python
+	import torch
+	import torch.nn as nn
+	import torch.optim as optim
+
+	class SimpleNN(nn.Module):
+		def __init__(self):
+			super(SimpleNN, self).__init__()
+			self.fc1 = nn.Linear(28 * 28, 128)  # 입력 차원 28x28
+			self.fc2 = nn.Linear(128, 10)  # 출력 차원 10 (MNIST 10개 클래스)
+
+		def forward(self, x):
+			x = x.view(-1, 28 * 28)  # Flatten
+			x = torch.relu(self.fc1(x))  # 활성화 함수
+			x = self.fc2(x)
+			return x
+	```
+
+3. 손실 함수 정의 (Loss Function)
+	- 모델이 예측한 값과 실제 값 사이의 차이를 계산할 손실 함수(loss function)를 정의합니다. 예를 들어, 분류 문제의 경우 CrossEntropyLoss를 사용할 수 있습니다.
+
+
+	```python
+	loss_fn = nn.CrossEntropyLoss()  # 다중 클래스 분류 손실 함수
+	```
+
+4. 옵티마이저 정의 (Optimizer Definition)
+	- 모델의 파라미터를 최적화할 옵티마이저를 정의합니다. 대표적인 옵티마이저로는 SGD, Adam 등이 있습니다.
+
+	```python
+	optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+	```
+
+5. 훈련 루프 (Training Loop)
+	- 데이터셋에 대해 여러 번 학습을 반복합니다. 매 반복마다 데이터를 모델에 입력하고, 예측 값을 얻은 후, 손실을 계산하고, 역전파(backpropagation)를 통해 가중치를 업데이트합니다.
+	- 모델 훈련:
+		- 데이터를 모델에 전달하고 예측값 생성.
+		- 손실 계산.
+		- optimizer.zero_grad()로 이전 기울기 초기화.
+		- loss.backward()로 기울기 계산(역전파).
+		- optimizer.step()으로 파라미터 업데이트.
+	- 반복: 여러 에포크(epoch) 동안 데이터를 처리.
+
+	```python
+	for epoch in range(10):  # 10번 에폭을 훈련
+		for data, target in train_loader:
+			optimizer.zero_grad()  # 이전 기울기 초기화
+			output = model(data)  # 모델 예측
+			loss = loss_fn(output, target)  # 손실 계산
+			loss.backward()  # 역전파
+			optimizer.step()  # 가중치 업데이트
+		
+		print(f'Epoch {epoch+1}, Loss: {loss.item()}')
+
+	```
+
+6. 모델 평가 (Model Evaluation)
+	- 모델이 얼마나 잘 학습되었는지 평가하기 위해, 검증 데이터셋을 사용하여 예측을 실행하고 정확도 등의 평가 지표를 계산합니다.
+	- 훈련이 완료되면 검증 데이터셋 또는 테스트 데이터셋으로 성능 평가.
+	- torch.no_grad() 블록 내에서 평가(기울기 계산 방지).
+
+	```python
+	model.eval()  # 평가 모드로 전환
+	correct = 0
+	total = 0
+	with torch.no_grad():  # 기울기 계산 비활성화
+		for data, target in test_loader:
+			output = model(data)
+			_, predicted = torch.max(output, 1)
+			total += target.size(0)
+			correct += (predicted == target).sum().item()
+
+	print(f'Accuracy: {100 * correct / total}%')
+	```
+
+7. 모델 저장 및 불러오기 (Save and Load Model)
+	- 훈련이 끝난 후, 모델을 저장하고, 나중에 불러와서 사용할 수 있습니다.
+	- 저장: torch.save()로 모델 저장
+
+	```python
+	# 모델 저장
+	torch.save(model.state_dict(), 'model.pth')
+
+	# 모델 불러오기
+	model = SimpleNN()
+	model.load_state_dict(torch.load('model.pth'))
+
+	```
+
+8. 대부분(!)의 딥러닝은 이 순서를 따릅니다. 
 
 #### 가끔씩 실행 오류
 - import torch에서 NameError: name '_C' is not defined 가 발생하면
@@ -97,82 +209,6 @@ PyTorch 학습 리포지토리
 
 [합성곱신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch05.ipynb)
 
-### 파이토치 신경망 훈련 순서
-1. 데이터 준비
-	- 데이터셋 로드: PyTorch의 Dataset 클래스를 활용하거나, torchvision 같은 라이브러리에서 제공하는 데이터셋을 사용합니다.
-	- 데이터 전처리: 필요한 경우 데이터를 정규화, 원-핫 인코딩 등으로 변환합니다.
-	- DataLoader 생성: PyTorch의 DataLoader를 사용하여 데이터를 배치로 나누고, 셔플 및 병렬 처리를 설정합니다.
-2. 모델 정의
-	- 신경망 설계: PyTorch의 torch.nn.Module을 상속받아 모델 구조를 정의합니다.
-	
-	```python
-	class NeuralNet(nn.Module):
-		def __init__(self):
-			super(NeuralNet, self).__init__()
-			self.fc = nn.Linear(784, 10)  # 예: 784 입력 -> 10 출력
-
-		def forward(self, x):
-			return self.fc(x)
-
-	model = NeuralNet()
-	```
-
-3. 손실 함수와 옵티마이저 정의
-	- 손실 함수: 문제 유형에 맞는 손실 함수 선택 (nn.CrossEntropyLoss, nn.MSELoss 등).
-	- 옵티마이저: torch.optim에서 SGD, Adam 등 선택 후 모델 파라미터를 전달.
-
-	```python
-	criterion = nn.CrossEntropyLoss()
-	optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-
-	```
-
-4. 훈련 루프 정의
-	- 모델 훈련:
-		- 데이터를 모델에 전달하고 예측값 생성.
-		- 손실 계산.
-		- optimizer.zero_grad()로 이전 기울기 초기화.
-		- loss.backward()로 기울기 계산(역전파).
-		- optimizer.step()으로 파라미터 업데이트.
-	- 반복: 여러 에포크(epoch) 동안 데이터를 처리.
-
-	```python
-	for epoch in range(num_epochs):
-		for inputs, labels in dataloader:
-			outputs = model(inputs)
-			loss = criterion(outputs, labels)
-			optimizer.zero_grad()
-			loss.backward()
-			optimizer.step()
-
-	```
-
-5. 모델 평가
-	- 훈련이 완료되면 검증 데이터셋 또는 테스트 데이터셋으로 성능 평가.
-	- torch.no_grad() 블록 내에서 평가(기울기 계산 방지).
-
-	```python
-	with torch.no_grad():
-		for inputs, labels in test_loader:
-			outputs = model(inputs)
-			# 예: 정확도 계산
-
-	```
-
-6. 모델 저장 및 불러오기
-	- 저장: torch.save()로 모델 저장
-
-	```python
-	torch.save(model.state_dict(), 'model.pth')
-
-	```
-
-	- 불러오기: 저장된 모델 로드
-
-	```python
-	model.load_state_dict(torch.load('model.pth'))
-	model.eval()
-	```
 
 ### 3분 딥러닝 따라만하기
 - https://github.com/keon/3-min-pytorch/tree/master
