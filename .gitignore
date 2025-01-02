@@ -169,3 +169,5 @@ cnn/data/cifar-10-python.tar.gz
 /hansung_pytorch/MNIST_data
 /3min_pytorch/data/FashionMNIST
 /3min_pytorch/data
+yolo_test/instance-segmentation-object-tracking.avi
+yolo_test/object_counting_output.avi
