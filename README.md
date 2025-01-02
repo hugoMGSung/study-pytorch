@@ -235,4 +235,6 @@ PyTorch 학습 리포지토리
 
 
 
-
+### YOLO
+- Yolov3 등에서도 Pytorch를 사용할 수 있었으나, 설치 및 설정이 쉽지 않음
+- Yolov8로 들어서면서 Ultralytics 에서 손쉽게 사용할 수 있게 해줌
