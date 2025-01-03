@@ -172,3 +172,6 @@ cnn/data/cifar-10-python.tar.gz
 yolo_test/instance-segmentation-object-tracking.avi
 yolo_test/object_counting_output.avi
 /pytorch_3min/data
+/pytorch_hansung/CIFAR_data
+/pytorch_hansung/MNIST_data
+/pytorch_level1/MNIST
