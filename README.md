@@ -199,41 +199,42 @@ PyTorch 학습 리포지토리
 - ONNX(Open Neural Network Exchange) 포맷의 모델 포함
 
 
-[파이토치2 - 텐서](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch02.ipynb)
+[파이토치2 - 텐서](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch_level1/pytorch02.ipynb)
 
-[선형회귀](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch03.ipynb)
+[선형회귀](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch_level1/pytorch03.ipynb)
 
+[인경신공망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch_level1/pytorch04.ipynb)
 
-
-[인경신공망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch04.ipynb)
-
-[합성곱신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch01/pytorch05.ipynb)
+[합성곱신경망](https://github.com/hugoMGSung/study-pytorch/blob/main/pytorch_level1/pytorch05.ipynb)
 
 
 ### 3분 딥러닝 따라만하기
 - https://github.com/keon/3-min-pytorch/tree/master
 
-[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/3min_pytorch)
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/pytorch_3min)
 
 
 ### 파이토치 HS 학습
 
-[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/hansung_pytorch)
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/pytorch_hansung)
 
 #### 선형회귀 부터 CNN 까지
 - 완료
 
+### 파이토치 위키북스
+[참조](https://github.com/wikibook/pytorchdl2)
+
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/pytorch_wikibook)
+
 ### 파이토치 실습
 
-[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/after_hs)
+[링크](https://github.com/hugoMGSung/study-pytorch/tree/main/pytorch_prac)
 
 ### 캐글 Kagglehub 사용
 
 - 캐글 로그인 후 셋팅에서 API 토큰 생성, kaggle.json 파일 다운로드
 
 	<img src="https://raw.githubusercontent.com/hugoMGSung/study-pytorch/main/images/torch0020.png" width="730">
-
-
 
 ### YOLO
 - Yolov3 등에서도 Pytorch를 사용할 수 있었으나, 설치 및 설정이 쉽지 않음
