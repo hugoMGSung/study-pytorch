@@ -175,3 +175,5 @@ yolo_test/object_counting_output.avi
 /pytorch_hansung/CIFAR_data
 /pytorch_hansung/MNIST_data
 /pytorch_level1/MNIST
+/pytorch_level2/data/cifar-10-batches-py
+pytorch_level2/data/cifar-10-python.tar.gz
