@@ -178,3 +178,4 @@ yolo_test/object_counting_output.avi
 /pytorch_level2/data/cifar-10-batches-py
 pytorch_level2/data/cifar-10-python.tar.gz
 pytorch_level2/data/vgg16.pt
+/pytorch_level3/data/dogs-vs-cats
