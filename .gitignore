@@ -181,3 +181,4 @@ pytorch_level2/data/vgg16.pt
 /pytorch_level3/data/dogs-vs-cats
 /pytorch_level3/data
 /pytorch_chatbot/data
+/torch-cpu-env
