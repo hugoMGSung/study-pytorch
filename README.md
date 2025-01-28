@@ -237,6 +237,14 @@ PyTorch 학습 리포지토리
 
 	<img src="https://raw.githubusercontent.com/hugoMGSung/study-pytorch/main/images/torch0020.png" width="730">
 
+### 텍스트 마이닝
+
+### 챗봇관련
+1. 토크나이징
+2. 임베딩
+3. 덱스트 유사도
+4. 챗봇 엔진
+
 ### YOLO
 - Yolov3 등에서도 Pytorch를 사용할 수 있었으나, 설치 및 설정이 쉽지 않음
 - Yolov8로 들어서면서 Ultralytics 에서 손쉽게 사용할 수 있게 해줌
