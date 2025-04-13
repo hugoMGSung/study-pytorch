@@ -185,3 +185,5 @@ pytorch_level2/data/vgg16.pt
 /pytorch_chatbot/MNIST
 /pytorch_projects/data
 /pytorch_projects/dataset
+/pytorch_projects/splitted
+/torch-gpu-env
